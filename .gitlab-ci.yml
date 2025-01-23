@@ -1,15 +1,15 @@
 docker-build:
   # Use the official docker image.
-  image: docker:latest
+  image: docker:27.5
   
   stage: build
 
   variables:
     DOCKER_HOST: tcp://localhost:2375
-    DOCKER_TLS_CERTDIR: ''
+    DOCKER_TLS_CERTDIR: ""
 
   services:
-    - docker:dind
+    - docker:27.5-dind
 
   before_script:
     - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PASSWORD" $DOCKER_REGISTRY
