@@ -1,5 +1,5 @@
 default:
-  image: docker:lates
+  image: docker:latest
   services:
     - docker:dind
   before_script:
@@ -27,6 +27,6 @@ docker-build:
     - docker build --pull -t "$CI_PROJECT_NAME${tag}" .
     - docker push "$CI_PROJECT_NAME${tag}"
   # Run this job in a branch where a Dockerfile exists
-  when: manual
+  # when: manual
   tags:
     - docker
