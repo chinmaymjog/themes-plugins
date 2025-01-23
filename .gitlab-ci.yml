@@ -10,7 +10,9 @@ docker-build:
     DOCKER_TLS_CERTDIR: ""
 
   services:
-    - docker:dind
+    - name: docker:dind
+      variables:
+        HEALTHCHECK_TCP_PORT: 2375/tcp
 
   before_script:
     - docker info && docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PASSWORD" $DOCKER_REGISTRY
