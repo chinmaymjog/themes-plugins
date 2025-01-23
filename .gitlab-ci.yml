@@ -2,6 +2,8 @@ docker-build:
   # Use the official docker image.
   image: docker:latest
   stage: build
+  variables:
+    DOCKER_HOST: tcp://127.0.0.1:2375
   services:
     - docker:dind
   before_script:
