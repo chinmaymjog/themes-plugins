@@ -1,13 +1,6 @@
-image: docker:27.5
-
-services:
-  - docker:27.5-dind
+image: docker:27.5-dind
 
 docker-build:
-  variables:
-    DOCKER_HOST: tcp://docker:2375
-    DOCKER_TLS_CERTDIR: ""
-
   stage: build
   before_script:
     - docker login -u "$DOCKER_REGISTRY_USER" -p "$DOCKER_REGISTRY_PASSWORD" $DOCKER_REGISTRY
