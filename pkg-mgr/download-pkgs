@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x  # Enables debugging mode
-
 theme_url="https://downloads.wordpress.org/theme"
 theme_list="common-themes.list"
 plugin_url="https://downloads.wordpress.org/plugin"
