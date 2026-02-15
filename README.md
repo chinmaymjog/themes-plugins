@@ -11,7 +11,7 @@ A standardized repository for managing custom WordPress themes and plugins in an
 
 ## 🧱 Ecosystem Integration
 
-These assets are consumed by the multi-stage build process in the **[WordPress Enterprise Boilerplate](https://github.com/your-username/wp-boilerplate)**.
+These assets are consumed by the multi-stage build process in the **[WordPress Enterprise Boilerplate](https://github.com/chinmaymjog/wp-boilerplate)**.
 
 ## 📁 Project Structure
 
